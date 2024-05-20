@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Resume - Amir Eftekhar</title>
+    <style>
+        #pdf-viewer {
+            width: 80%; /* Adjust the width as needed */
+            height: 1500px; /* Adjust the height as needed */
+            border: none;
+            margin: 0 auto; /* Center the PDF viewer */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-700 to-blue-800 text-gray-100">
+    <nav class="bg-gray-800 bg-opacity-90 shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-white">Amir Eftekhar</a>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="text-white transition transform hover:scale-110">Home</a></li>
+                <li><a href="/about" class="text-white transition transform hover:scale-110">About</a></li>
+                <li><a href="/projects" class="text-white transition transform hover:scale-110">Projects</a></li>
+                <li><a href="/resume" class="text-white transition transform hover:scale-110">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container mx-auto py-12">
+        <h2 class="text-4xl font-bold mb-8 text-center text-blue-300">Resume</h2>
+        <div class="bg-white bg-opacity-10 shadow-md rounded p-4">
+            <div id="pdf-viewer"></div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='pdfobject.min.js') }}"></script>
+    <script>
+        PDFObject.embed("{{ pdf_url }}", "#pdf-viewer", { pdfOpenParams: { toolbar: 0, navpanes: 0, statusbar: 0, view: "FitH" } });
+    </script>
+</body>
+</html>

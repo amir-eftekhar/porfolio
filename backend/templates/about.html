@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>About Me - Amir Eftekhar</title>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-700 to-blue-800 text-gray-100">
+    <nav class="bg-gray-800 bg-opacity-90 shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-white">Amir Eftekhar</a>
+            <ul class="flex space-x-4">
+                <li><a href="/" class="text-white transition transform hover:scale-110">Home</a></li>
+                <li><a href="/about" class="text-white transition transform hover:scale-110">About</a></li>
+                <li><a href="/projects" class="text-white transition transform hover:scale-110">Projects</a></li>
+                <li><a href="/resume" class="text-white transition transform hover:scale-110">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container mx-auto py-12">
+        <h2 class="text-4xl font-bold mb-8 text-center text-blue-300">About Me</h2>
+        <div class="flex flex-col lg:flex-row lg:space-x-8 items-center">
+            <img src="{{ url_for('static', filename='img/headshot.png') }}" alt="Amir Eftekhar" class="w-48 h-48 object-cover rounded-full mb-4 lg:mb-0 border-4 border-blue-500 transform transition hover:scale-105">
+            <div>
+                <p class="mb-4 text-lg">Hello! I'm Amir, a sophomore at Dublin High School and I'm really excited about the future of technology. I dream of starting my own tech company someday because I believe that technology can make our lives better and help solve big problems in society. My interest in tech started with playing around with software and building simple robots, and it has grown into a real passion that drives my studies and activities. Every day, I'm learning something new in this field, and I'm committed to using my growing skills to make a difference in the world.</p>
+                <p class="mb-4 text-lg">During my time in high school, I've gotten involved in some amazing projects that combine technology with real-world applications. I've worked with Gaels Suite, where I helped provide valuable information about robotics competitions, and at Youth Coding Workshop, where I developed learning programs that introduce kids to the basics of coding. These experiences have taught me a lot about leading projects and communicating ideas clearly, which are key skills for anyone who wants to succeed in tech. I also participate in track and field, which has taught me a lot about teamwork and the importance of strategic thinking—skills that are just as important in technology as they are in sports.</p>
+                <p class="mb-4 text-lg">As I continue to learn and grow, I'm really looking forward to taking on new challenges and meeting more people who are as excited about technology as I am. This website is a showcase of what I've done so far and a peek into where I'm headed. I hope it gives you a sense of my passion and potential. Thanks so much for stopping by! I'm eager to connect with fellow students, mentors, and anyone interested in technology. Let's see what we can build together!</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
